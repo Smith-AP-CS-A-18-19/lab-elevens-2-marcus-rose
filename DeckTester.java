@@ -13,15 +13,15 @@ public class DeckTester {
 
 		String ranks2[] = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "Jacks", "Queens", "Kings"};
 		String suits2[] = {"Spades" ,"Clubs", "Hearts", "Diamonds"};
-		int pointValues2[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+		int pointValues2[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
 
 		Deck e = new Deck(ranks2, suits2, pointValues2);
 
-		for (int i = 1; i < ranks2.length; i++) {
-			System.out.print(e.deal());
+		for (int i = 0; i < (ranks2.length * suits2.length); i++) {
+			System.out.println(e.deal());
 		}
 
-		System.out.print(e.isEmpty());
+		System.out.println(e.isEmpty());
 
 
 

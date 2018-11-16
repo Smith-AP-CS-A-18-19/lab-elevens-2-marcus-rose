@@ -32,6 +32,7 @@ public class Deck {
 	 */
 	public Deck(String[] ranks, String[] suits, int[] values) {
 		cards = new Card[ranks.length * suits.length];
+		size = ranks.length * suits.length;
 		int rankIndex = 0;
 		int suitIndex = 0;
 		for (int i = 0; i < cards.length; i++) {
@@ -95,8 +96,12 @@ public class Deck {
 	 *         previously dealt.
 	 */
 	public Card deal() {
-		Card cardReturned = cards[size];
-		return cardReturned;
+		if (size > 0) {
+			size--;
+			return cards[size];
+		} else {
+			return null;
+		}
 	}
 
 	/**
